@@ -7,3 +7,4 @@ RUN xcaddy build v${VERSION} \
     --with github.com/lucaslorentz/caddy-docker-proxy/plugin \
 FROM caddy:${VERSION}-alpine
 COPY --from=builder /usr/bin/caddy /usr/bin/caddy
+CMD ["caddy", "docker-proxy"]
